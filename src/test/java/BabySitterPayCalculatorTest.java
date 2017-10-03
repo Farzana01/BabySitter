@@ -1,14 +1,23 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class BabySitterPayCalculatorTest {
 	
-	@Test
 	
+	BabySitterPayCalculator babySitterPayCalculator;
+	
+	@Before
+	public void setUp(){
+		babySitterPayCalculator = new BabySitterPayCalculator();
+	}
+	
+	@Test
 	 public void shouldBeStartTimeBefore5pmIsNotValid() {
-		
-		BabySitterPayCalculator = new BabySitterPayCalculator();
+				
 		int startTime = 16;
-		assertFalse(BabySitterPayCalculator.validStartTime(startTime);
+		assertFalse(babySitterPayCalculator.validStartTime(startTime));
 		
 	}
 	
