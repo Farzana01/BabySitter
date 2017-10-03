@@ -18,8 +18,13 @@ public class BabySitterPayCalculatorTest {
 				
 		int startTime = 16;
 		assertFalse(babySitterPayCalculator.validStartTime(startTime));
-		
 	}
 	
-
+	@Test
+	 public void shouldBeStartTimeAfter5pmIsValid() {
+				
+		int startTime = 18;
+		assertTrue(babySitterPayCalculator.validStartTime(startTime));
+	}
+	
 }
