@@ -30,13 +30,14 @@ public class BabySitterPayCalculator {
 				|| (endTime > 0 && endTime <= 4 && (currentTime - 24) < endTime); currentTime++) {
 			if (currentTime < bedTime) {
 				hourlyPay = 12;
-			} else if (currentTime >= bedTime && currentTime <=24) {
+			} else if (currentTime >= bedTime && currentTime <= 24) {
 				hourlyPay = 8;
+			} else {
+				hourlyPay = 16;
 			}
 		}
-		totalPay +=hourlyPay;
+		totalPay += hourlyPay;
 		return totalPay;
-	
-	
-}
+
+	}
 }
