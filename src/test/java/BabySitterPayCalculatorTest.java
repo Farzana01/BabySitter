@@ -45,4 +45,10 @@ public class BabySitterPayCalculatorTest {
 		assertEquals(12,babySitterPayCalculator.getPaid(17,20));
 
 }
+	@Test
+	 public void shouldPay12DollarsBetween8pmAndMidnight() {
+						
+		assertEquals(8,babySitterPayCalculator.getPaid(20,24));
+	
+}
 }
