@@ -27,4 +27,11 @@ public class BabySitterPayCalculatorTest {
 		assertTrue(babySitterPayCalculator.validStartTime(startTime));
 	}
 	
+	@Test
+	 public void shouldBeEndTimeAfter4AmIsNotValid() {
+				
+		int endTime = 5;
+		assertFalse(babySitterPayCalculator.validStartTime(endTime));
+	}
+	
 }
